@@ -146,7 +146,7 @@ hr {
 
 .container{
     min-height: 100vh;
-    background: #CEC7B7;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
