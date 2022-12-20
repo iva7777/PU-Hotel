@@ -135,6 +135,29 @@ hr {
     border: 1px solid #23252B;
 }
 
+/*payment method*/
+.payment {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 30px;
+}
+
+fieldset {
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+}
+
+legend {
+    color: #E1E1E5;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 /*credit card form*/
 .credit-card-payment {
     box-sizing: border-box;
