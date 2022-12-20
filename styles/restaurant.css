@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #E1E1E5;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.containers {
+    display: none;
+}
+
+.containers img {
+    --s: 15px; /*size of the frame*/
+    padding: calc(2 * var(--s));
+    border: 10px double #646466;
+    filter: drop-shadow(29px 14px 24px #000);
+    transition: .4s;
+}
+
+.containers img:hover {
+   border-radius: 20px;
+   transform: scale(1.5);
+   cursor: pointer;
+}
+
+.back, .forward {
+    position: absolute;
+    cursor: pointer;
+    width: auto;
+    top: 48%;
+    margin-top: -23px;
+    padding: 17px;
+    color: #23252B;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+
+.forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.back:hover, .forward:hover {
+    background-color: #CEC7B7;
+}
+
+div .info {
+    position: absolute;
+    width: 100%;
+    padding: 10px 14px;
+    bottom: 10px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+    text-align: center;
+}
+
+.messageInfo {
+    position: absolute;
+    top: 0;
+    padding: 10px 14px;
+    color: #767677;
+    font-size: 14px;
+}
+
+.dots {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 3px;
+    background-color: #E1E1E5;
+    border-radius: 50%;
+}
+
+.enable, .dots:hover {
+    background-color: #717161;
+}
+
+.fade {
+    animation: fade 1.4s;
+    -webkit-animation: fade 1.4s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 2;
+    }
+}
+

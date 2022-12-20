@@ -1,0 +1,37 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--menu-color);
+    max-height: 50px;
+}
+
+nav p {
+    float: left;
+    color: var(--menu-font-color);
+    font-size: 12pt;
+    font-weight: 1000;
+    margin-left: 5%;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--menu-font-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover:not([active]) {
+    background-color: var(--menu-on-hover-color);
+}
+
+[active] {
+    color: var(--menu-on-active-color);
+    background-color: var(--menu-font-color);
+}

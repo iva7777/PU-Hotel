@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pu, hotel, plovdiv">
+    <title>PU Hotels - За нас</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/script.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <p>Хотел ПУ</p>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="info.html" active>За нас</a></li>
+                <li><a href="rating.html">Рейтинг</a></li>
+                <li><a href="reservation.html">Резервация</a></li>
+                <li><a href="restaurant.html">Ресторант</a></li>
+                <li><a href="rooms.html">Стаи</a></li>
+                <li><a href="index.html">Начало</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Често задавани въпроси</h2>
+            <div class="questions">
+                <h4>Въпрос</h4>
+                <p>Отговор</p>
+            </div>
+            <div class="questions">
+                <h4>Въпрос</h4>
+                <p>Отговор</p>
+            </div>
+            <div class="questions">
+                <h4>Въпрос</h4>
+                <p>Отговор</p>
+            </div>
+        </article>
+        <aside>
+            <p>Имате въпрос? Задайте го в нашата 
+                <button onclick="openForm()">форма за въпроси</button>
+            </p>
+            <div class="form-popup" id="questions-form">
+                <form action="№" class="form-container">
+        
+                    <button type="button" id="close-button" onclick="closeForm()">Х</button>
+        
+                    <h4 id="form-title">Вход</h4>
+                    <div class="input-field" id="name-field">
+                        <label for="name">Име</label>
+                        <input type="text" id="name" placeholder="ИМЕ">
+                    </div>
+                    <div class="input-field" id="surname-field">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" placeholder="ФАМИЛИЯ">
+                    </div>
+                    <input type="submit" value="Изпрати">
+                </form>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

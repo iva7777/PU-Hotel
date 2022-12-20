@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pu, hotel, plovdiv">
+    <title>PU Hotels - Ресторант</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/carousel.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <p>Хотел ПУ</p>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="info.html">За нас</a></li>
+                <li><a href="rating.html">Рейтинг</a></li>
+                <li><a href="reservation.html">Резервация</a></li>
+                <li><a href="restaurant.html" active>Ресторант</a></li>
+                <li><a href="rooms.html">Стаи</a></li>
+                <li><a href="index.html">Начало</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h3>Ресторант</h3>
+            <div class="slideshow-container fade">
+                <div class="containers">
+                    <div class="messageInfo">1 / 3</div>
+                    <img src="images/restaurant-logo.jpg" alt="restaurant-logo" style="width: 100%;">
+                    <div class="info">Ресторант към Хотел ПУ</div>
+                </div>
+    
+                <div class="containers">
+                    <div class="messageInfo">2 / 3</div>
+                    <img src="images/restaurant-interior.jpg" alt="restaurant-interior" style="width: 100%; --c: #E3D75D; --b: 1px; --s: 18px">
+                    <div class="info">Ресторант към Хотел ПУ - отвътре</div>
+                </div>
+    
+                <div class="containers">
+                    <div class="messageInfo">3 / 3</div>
+                    <img src="images/menu-all.jpg" alt="menu" style="width: 100%;">
+                    <div class="info">Меню</div>
+                </div>
+    
+                <a class="back" onclick="plusSlide(-1)">&#10094;</a>
+                <a class="forward" onclick="plusSlide(1)">&#10095;</a>
+            </div>
+            <br>
+    
+            <div style="text-align: center;">
+                <span class="dots" onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

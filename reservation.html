@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pu, hotel, plovdiv">
+    <title>PU Hotels - Резервация</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/validation.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <p>Хотел ПУ</p>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="info.html">За нас</a></li>
+                <li><a href="rating.html">Рейтинг</a></li>
+                <li><a href="reservation.html" active>Резервация</a></li>
+                <li><a href="restaurant.html">Ресторант</a></li>
+                <li><a href="rooms.html">Стаи</a></li>
+                <li><a href="index.html">Начало</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form">
+            <h3>Резервация</h3>
+            <form action="#" method="post" id="form">
+                <div class="row">
+                    <div class="input-field" id="name-field">
+                        <label for="name">Име</label>
+                        <input type="text" id="name" placeholder="ИМЕ">
+                    </div>
+                    <div class="input-field" id="surname-field">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" placeholder="ФАМИЛИЯ">
+                    </div>
+                </div>
+                <div class="input-field" id="age-field">
+                    <label for="age">Години</label>
+                    <input type="number" id="age" placeholder="ГОДИНИ">
+                </div>
+                <div class="input-field" id="email-field">
+                    <label for="email">Имейл</label>
+                    <input type="email" name="email" id="email" placeholder="ЕЛЕКТРОННА ПОЩА">
+                </div>
+                <div class="input-field" id="password-field">
+                    <label for="password">Парола</label>
+                    <input type="password" name="password" id="password" placeholder="ПАРОЛА">
+                </div>
+                <div id="dates-field">
+                    <div class="row">
+                        <div class="input-field" id="check-in-field">
+                            <label for="check-in">Дата на настаняване</label>
+                            <input type="date" name="check-in" id="check-in">
+                        </div>
+                        <div class="input-field" id="check-out-field">
+                            <label for="check-out">Дата на отпътуване</label>
+                            <input type="date" name="check-out" id="check-out">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field" id="guests-field">
+                    <label for="guests">Гости</label>
+                    <input type="number" id="guests" placeholder="ГОСТИ">
+                </div>
+                <input type="submit" id="submit" value="Изпращане">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
