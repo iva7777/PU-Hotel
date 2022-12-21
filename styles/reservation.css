@@ -182,6 +182,7 @@ legend {
     flex-flow: column;
     margin-top: 1%;
     padding-bottom: 60px;
+    animation: dropPaymentForm 0.5s ease forwards;
 }
 
 .container form{
@@ -334,4 +335,10 @@ legend {
 .container .card-container .back .box img{
     margin-top: 30px;
     height: 30px;
+}
+
+@keyframes dropPaymentForm {
+	0% {opacity: 0;}
+	60% {transform: translateY(50px);}
+	100% {transform: translateY(0px); opacity: 1;}
 }
