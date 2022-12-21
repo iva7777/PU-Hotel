@@ -9,9 +9,21 @@ let translator = {
     "guests": "брой гости"
 }
 
+let allValidated = true;
+
 document.querySelector("#form").addEventListener("submit", (event) => {
     event.preventDefault();
+    allValidated = true;
     validateReservationForm();
+    if (allValidated) {
+        if (document.getElementById("card").checked) {
+            document.getElementById("credit-card-payment").style.display = "block";
+        }
+    }
+});
+
+document.querySelector("#payment-form").addEventListener("submit", (event) => {
+    event.preventDefault();
 });
 
 validateReservationForm = () => {
@@ -60,6 +72,8 @@ validateRequiredField = (fieldName) => {
             field.removeChild(message);
         }
 
+        allValidated = false;
+
     }
     else {
         if (!document.getElementById(`${fieldName}-message`)) {
@@ -101,6 +115,8 @@ validateAge = () => {
         underageMessage.id = "underage-message";
         underageMessage.innerHTML = "Трябва да сте пълнолетен, за да можете да правите резервации.";
         document.getElementById("age-field").appendChild(underageMessage);
+
+        allValidated = false;
     }
     else {
         if (!document.getElementById("underage-message")) {
@@ -130,6 +146,8 @@ let email = document.getElementById("email").value;
         emailMessage.id = "valid-email-message";
         emailMessage.innerHTML = "Моля, попълнете валиден имейл.";
         document.getElementById("email-field").appendChild(emailMessage);
+
+        allValidated = false;
     }
     else {
         if (!document.getElementById("valid-email-message")) {
@@ -160,6 +178,8 @@ validatePassword = () => {
         passwordMessage.id = "valid-pass-message";
         passwordMessage.innerHTML = "Паролата трябва да е дълга поне 8 символа, да има поне една главна/малка буква, да има поне едно число и един символ.";
         document.getElementById("password-field").appendChild(passwordMessage);
+
+        allValidated = false;
     }
     else {
         if (!document.getElementById("valid-pass-message")) {
@@ -190,6 +210,8 @@ validateDates = () => {
         passwordMessage.id = "date-diff-message";
         passwordMessage.innerHTML = "Датата на настаняване трябва да е преди датата на отпътуване.";
         document.getElementById("dates-field").appendChild(passwordMessage);
+
+        allValidated = false;
     }
     else {
         if (!document.getElementById("date-diff-message")) {
