@@ -254,3 +254,12 @@ document.querySelector('.cvv-input').onmouseleave = () =>{
 document.querySelector('.cvv-input').oninput = () =>{
     document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
 }
+
+//close button
+openForm = () => {
+    document.getElementById("credit-card-payment").style.display = "block";
+}
+
+closeForm = () => {
+    document.getElementById("credit-card-payment").style.display = "none";
+}
