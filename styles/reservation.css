@@ -144,6 +144,24 @@ hr {
 
 /*payment method*/
 
+/*close button*/
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3D75D;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: white;
+}
+
 fieldset {
     border-radius: 5px;
     box-shadow: 0 10px 15px rgba(0,0,0,.1);
