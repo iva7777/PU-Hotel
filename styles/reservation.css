@@ -143,25 +143,6 @@ hr {
 }
 
 /*payment method*/
-
-/*close button*/
-.close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #E3D75D;
-    border-radius: 20px;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.close:hover {
-    background-color: white;
-}
-
 fieldset {
     border-radius: 5px;
     box-shadow: 0 10px 15px rgba(0,0,0,.1);
@@ -201,6 +182,21 @@ legend {
     margin-top: 1%;
     padding-bottom: 60px;
     animation: dropPaymentForm 0.5s ease forwards;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.close:hover {
+    color: #E3D75D;
 }
 
 .container form{
