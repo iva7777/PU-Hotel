@@ -10,7 +10,7 @@
 }
 
 .title {
-  color: #e1e1e5;
+  color: #e3d75d;
   text-align: center;
   font-size: 8rem;
 }
@@ -37,4 +37,17 @@
 
 .btn:hover {
   opacity: .8;
+}
+
+.about {
+  padding-top: 0.5rem;
+}
+
+.about h2 {
+  color: #cec7b7;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
