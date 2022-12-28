@@ -7,7 +7,8 @@ h3 {
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #E1E1E5;
+    color: var(--grey);
+    letter-spacing: 4px;
     padding-bottom: 3px;
     margin-bottom: 20px;
 }
@@ -43,7 +44,7 @@ h3 {
     top: 48%;
     margin-top: -23px;
     padding: 17px;
-    color: #23252B;
+    color: var(--black);
     font-weight: bold;
     font-size: 18px;
     transition: .4s ease;
@@ -57,7 +58,7 @@ h3 {
 }
 
 .back:hover, .forward:hover {
-    background-color: #CEC7B7;
+    background-color: var(--beige);
 }
 
 div .info {
@@ -77,7 +78,7 @@ div .info {
     position: absolute;
     top: 0;
     padding: 10px 14px;
-    color: #767677;
+    color: var(--silver);
     font-size: 14px;
 }
 
@@ -87,7 +88,7 @@ div .info {
     width: 16px;
     height: 16px;
     margin: 0 3px;
-    background-color: #E1E1E5;
+    background-color: var(--grey);
     border-radius: 50%;
 }
 
