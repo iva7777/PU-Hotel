@@ -3,13 +3,13 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--menu-color);
+    background-color: var(--darkblue);
     max-height: 50px;
 }
 
 nav p {
     float: left;
-    color: var(--menu-font-color);
+    color: var(--grey);
     font-size: 12pt;
     font-weight: 1000;
     margin-left: 5%;
@@ -21,17 +21,17 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: var(--menu-font-color);
+    color: var(--grey);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 nav ul li a:hover:not([active]) {
-    background-color: var(--menu-on-hover-color);
+    background-color: var(--silver);
 }
 
 [active] {
     color: var(--menu-on-active-color);
-    background-color: var(--menu-font-color);
+    background-color: var(--beige);
 }
