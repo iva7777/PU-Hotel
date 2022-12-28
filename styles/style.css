@@ -7,10 +7,12 @@
 
 :root {
     /* TODO: change the name of the variables */
-    --menu-color: #2E375A;
-    --menu-font-color: #E1E1E5;
-    --menu-on-hover-color: #767677;
-    --menu-on-active-color: #23252B;
+    --black: #23252b;
+    --silver: #767677;
+    --grey: #E1E1E5;
+    --beige: #CEC7B7;
+    --darkblue: #2E375A;
+    --yellow: #E3D75D;
 }
 
 * {
