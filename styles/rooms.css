@@ -1,7 +1,7 @@
 .room-info {
   background: linear-gradient(45deg, #E3D75D, #CEC7B7);
   border-radius: 20px;
-  border: 5px solid #E3D75D;
+  border: 5px solid var(--yellow);
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
   padding: 10px;
   margin: 10px;
@@ -9,10 +9,10 @@
 
 .room-info:hover {
   background: linear-gradient(45deg, #2E375A, #5363A2);
-  border: 8px solid #2E375A;
+  border: 8px solid var(--darkblue);
   opacity: .8;
   transition: all .3s ease-in-out;
-  color: #E1E1E5;
+  color: var(--grey);
 }
 
 .room-info p, .room-info ul li {
