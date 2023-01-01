@@ -24,7 +24,12 @@ body {
     background-repeat: no-repeat;
 } 
 
+a.logo {
+    font-family: Georgia, serif, bold;
+}
+
 a.logo:hover {
+    font-family: 'Segoe UI', sans-serif;
     color: var(--yellow);
     transition: all .3s ease-in;
     cursor: pointer;
