@@ -1,66 +1,76 @@
-.showcase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding-top: 18rem;
-  padding-bottom: 10rem;
-  position: relative;
+.room-info {
+  background: linear-gradient(45deg, #E3D75D, #CEC7B7);
+  border-radius: 20px;
+  border: 10px solid #E3D75D;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  padding: 10px;
+  margin: 10px;
 }
 
-.title {
-  color: #e3d75d;
-  text-align: center;
-  font-size: 8rem;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px 20px;
-  background: linear-gradient(45deg, #e3d75d, #cec7b7);
-  color: #23252b;
-  font-size: 1.7rem;
-  margin-top: 30px;
-  font-weight: 600;
-  border: 1px solid rgba(0, 0, 0, .3);
-  width: 16rem;
-  border-radius: 10px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.btn:hover {
+.room-info:hover {
+  background: linear-gradient(45deg, #2E375A, #5363A2);
+  border: 10px solid #2E375A;
   opacity: .8;
+  transition: all .3s ease-in-out;
+  color: #E1E1E5;
 }
 
-.about {
-  padding-top: 0.5rem;
+.room-info p, .room-info ul li {
+  font-size: 14pt;
 }
 
-.about h2 {
-  color: #cec7b7;
-  font-size: 1.8rem;
+.price {
   text-align: center;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  font-size: 16pt;
 }
 
-/*cards*/
-a .toggle-info-btn {
-  background: #006080;
-  border-radius: 4px;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, .25);
-  color: #fff;
-  display: inline-block;
-  padding: 6px 30px 8px;
-  position: relative;
+.row#reservation-redirect {
+  display: flex;
+  justify-content: center;
+}
+
+a#reservation-link {
   text-decoration: none;
-  transition: all .1s 0s ease-out;
+  padding: 7px 14px;
+  width: 200px;
+  padding: 15px 0;
+  margin: 0 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 2px solid var(--yellow);
+  background: var(--yellow);
+  color: var(--darkblue);
+  font-size: medium;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+a#reservation-link:hover {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
+  .room-info {
+      margin-top: 80px;
+  }
+
+  .room-info h1 {
+      text-align: center;
+  }
+
+  a#reservation-link {
+      width: 40%;
+      margin-top: 20px;
+      padding: 10px;
+      text-align: center;
+  }
 }
