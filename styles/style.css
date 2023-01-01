@@ -24,6 +24,12 @@ body {
     background-repeat: no-repeat;
 } 
 
+a.logo:hover {
+    color: var(--yellow);
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
 /* index */
 .info {
     background-color: rgba(0, 0, 0, .6);
