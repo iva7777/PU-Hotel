@@ -29,7 +29,6 @@ a.logo {
 }
 
 a.logo:hover {
-    font-family: 'Segoe UI', sans-serif;
     color: var(--yellow);
     transition: all .3s ease-in;
     cursor: pointer;
@@ -59,6 +58,7 @@ a.logo:hover {
     font-size: 14pt;
     text-align: justify;
 }
+
 
 .error-message {
     color: red;
