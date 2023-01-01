@@ -1,37 +1,91 @@
-nav ul {
-    list-style-type: none;
+.header {
+    background-color: var(--darkblue);
+    position: relative;
+    width: 100%;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+}
+
+.header ul {
     margin: 0;
     padding: 0;
+    list-style: none;
     overflow: hidden;
     background-color: var(--darkblue);
-    max-height: 50px;
 }
 
-nav p {
-    float: left;
-    color: var(--grey);
-    font-size: 12pt;
-    font-weight: 1000;
-    margin-left: 5%;
-}
-
-nav ul li {
-    float: right;
-}
-
-nav ul li a {
+.header li a {
     display: block;
-    color: var(--grey);
-    text-align: center;
-    padding: 14px 16px;
+    padding: 20px 20px;
     text-decoration: none;
+    color: white;
 }
 
-nav ul li a:hover:not([active]) {
-    background-color: var(--silver);
+.header li a:hover {
+    background-color: var(--yellow);
 }
 
-[active] {
-    color: var(--menu-on-active-color);
-    background-color: var(--beige);
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+}
+
+.header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+    margin: 20% 0;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 370px;
+}
+
+
+@media (min-width: 768px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+        color: white;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
 }
