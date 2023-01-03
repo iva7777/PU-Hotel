@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    z-index: 1;
 }
 
 .header ul {
@@ -59,7 +60,7 @@
 }
 
 .header .menu-btn:checked~.menu {
-    max-height: 370px;
+    max-height: 500px;
 }
 
 
