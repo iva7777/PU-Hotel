@@ -1,18 +1,33 @@
-
+.customers-container {
+    width: auto;
+    height: 100vh;
+}
 .customer{
     background: linear-gradient(45deg, #9C8E6D, var(--beige));
     padding: 35px;
     text-align: center;
-    margin: 24px 0;
+    margin: 50px 0;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
     cursor: pointer;
     transition: all .3s ease-in;
+    width: 30em;
+    height: 45em;
 }
 
-.customer h3{
+.customer h3 {
     font-family: Georgia, serif;
     font-size: 25px;
     color: #4d4636;
+}
+
+.customer span {
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.customer h3:hover {
+    color: var(--yellow);
+    transition: all .3s ease-out;
 }
 
 .customer p{
@@ -20,15 +35,20 @@
     text-align: left;
     opacity: 0.7;
     line-height: 1.8;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 
 .customer img{
-    width: 170px;
-    height: 170px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin: 25px auto;
+    margin: 25px 100px;
+}
+
+.customer img:hover {
+    filter: sepia(2);
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
 .customer:hover{
