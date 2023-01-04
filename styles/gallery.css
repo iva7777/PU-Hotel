@@ -65,3 +65,9 @@ ul {
 .image-gallery li:hover .overlay {
     transform: scale(1);
 }
+
+@media (max-width: 760px) {
+    .image-gallery {
+        margin: 10px 30px 10px 10px;
+    }
+}
