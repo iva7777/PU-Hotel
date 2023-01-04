@@ -1,3 +1,13 @@
+a.logo {
+    font-family: Georgia, serif, bold;
+}
+
+a.logo:hover {
+    color: var(--yellow);
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
 .header {
     background-color: var(--darkblue);
     position: relative;
