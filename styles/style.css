@@ -1,11 +1,4 @@
-@import "nav.css";
-@import "contacts.css";
-@import "restaurant.css";
-@import "reservation.css";
-@import "rooms.css";
-@import "rating.css";
-@import "gallery.css";
-@import "info.css";
+@import url("nav.css");
 
 :root {
     --black: #23252b;
