@@ -43,7 +43,7 @@ section {
 }
 
 .section-header h2 {
-    color: var(--grey);
+    color: var(--silver);
     font-weight: bold;
     font-size: 3em;
     margin-bottom: 20px;
@@ -68,7 +68,7 @@ section {
 .contact-info-icon {
     height: 70px;
     width: 70px;
-    background-color: #fff;
+    background-color: #BDAFAE;
     text-align: center;
     border-radius: 50%;
 }
@@ -83,13 +83,13 @@ section {
 }
 
 .contact-info-content h4 {
-    color: var(--yellow);
+    color: var(--darkblue);
     font-size: 1.4em;
     margin-bottom: 5px;
 }
 
 .contact-info-content p {
-    color: #fff;
+    color: var(--silver);
     font-size: 1em;
 }
 
@@ -148,21 +148,21 @@ section {
 .contact-form .input-box input[type="submit"]
 {
   width: 100%;
-  background: #00bcd4;
+  background: var(--darkblue);
   color: #FFF;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
-  border: 1px solid #00bcd4;
+  border: 1px solid var(--darkblue);
   transition: 0.5s;
 }
 
 .contact-form .input-box input[type="submit"]:hover
 {
   background: #FFF;
-  color: #00bcd4;
+  color: var(--darkblue);
 }
 
 @media (max-width: 991px) {

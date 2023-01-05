@@ -1,7 +1,7 @@
 .room-info {
-  background: linear-gradient(45deg, #E3D75D, #CEC7B7);
+  background: linear-gradient(45deg, hsla(12, 10%, 90%, 1) 0%, hsla(4, 10%, 71%, 1) 35%, hsla(0, 0%, 96%, 1) 100%);
   border-radius: 20px;
-  border: 5px solid var(--yellow);
+  border: 5px solid #BDAFAE;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
   padding: 10px;
   margin: 10px;
@@ -39,9 +39,9 @@ a#reservation-link {
   text-align: center;
   font-weight: bold;
   border-radius: 25px;
-  border: 2px solid var(--yellow);
-  background: var(--yellow);
-  color: var(--darkblue);
+  border: 2px solid #9e9190;
+  background: #BDAFAE;
+  color: var(--black);
   font-size: medium;
   text-transform: uppercase;
   cursor: pointer;

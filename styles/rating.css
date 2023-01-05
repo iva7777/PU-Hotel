@@ -3,7 +3,7 @@
     height: 100vh;
 }
 .customer{
-    background: linear-gradient(45deg, #9C8E6D, var(--beige));
+    background: linear-gradient(45deg, #BDAFAE, var(--beige));
     padding: 35px;
     text-align: center;
     margin: 50px 0;
@@ -53,7 +53,7 @@
 
 .customer:hover{
     transform: translateY(-18px);
-    background: linear-gradient(45deg, var(--beige), #9C8E6D);
+    background: linear-gradient(45deg, var(--beige), #BDAFAE);
 }
 
 @media(min-width: 992px){

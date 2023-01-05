@@ -14,8 +14,9 @@
 }
 
 body {
-    background-image: url("../images/Reception-HotelPU-blured.png");
+    /* background-image: url("../images/Reception-HotelPU-blured.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    background: #f4f4f4
 }
 
