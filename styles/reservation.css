@@ -9,6 +9,7 @@
 h3 {
     font-size: 25px;
     text-transform: uppercase;
+    letter-spacing: 4px;
     font-weight: 700;
     color: var(--grey);
     padding-bottom: 3px;
