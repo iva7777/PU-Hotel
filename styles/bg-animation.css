@@ -1,6 +1,3 @@
-body {
-    background: #f4f4f4
-}
 @media (min-width: 1024px) {
     i {
         position: absolute;
@@ -9,6 +6,7 @@ body {
         border-radius: 50%;
         -webkit-animation: 'screen' infinite;
         animation: 'screen' infinite;
+        z-index: -1;
     }
     
     i:nth-child(1) {
