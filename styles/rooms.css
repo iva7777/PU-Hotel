@@ -1,18 +1,17 @@
 .room-info {
   background: linear-gradient(45deg, hsla(12, 10%, 90%, 1) 0%, hsla(4, 10%, 71%, 1) 35%, hsla(0, 0%, 96%, 1) 100%);
   border-radius: 20px;
-  border: 5px solid #BDAFAE;
+  border: 2px solid #BDAFAE;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
   padding: 10px;
   margin: 10px;
 }
 
 .room-info:hover {
-  background: linear-gradient(45deg, #2E375A, #5363A2);
-  border: 8px solid var(--darkblue);
-  opacity: .8;
+  background: linear-gradient(90deg, hsla(193, 97%, 36%, 1) 0%, hsla(190, 100%, 40%, 1) 50%, hsla(190, 53%, 57%, 1) 100%);
+  border: 2px solid #007596;
   transition: all .3s ease-in-out;
-  color: var(--grey);
+  color: var(--black);
   cursor: pointer;
 }
 
@@ -49,8 +48,8 @@ a#reservation-link {
 }
 
 a#reservation-link:hover {
-    background: transparent;
-    border: 2px solid #fff;
+    background: #00AACC;
+    border: 2px solid #007596;
 }
 
 @media (min-width: 768px) {
