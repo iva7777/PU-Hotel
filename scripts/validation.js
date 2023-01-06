@@ -6,12 +6,15 @@ let translator = {
     "password": "парола",
     "check-in": "дата на настаняване",
     "check-out": "дата на отпътуване",
-    "guests": "брой гости"
+    "guests": "брой гости",
+    "names": "Вашите имена",
+    "message": "Вашето съобщение"
 }
 
 let allValidated = true;
 
-document.querySelector("#form").addEventListener("submit", (event) => {
+let form = document.querySelector("#form");
+(!!form) ? form.addEventListener("submit", (event) => {
     event.preventDefault();
     allValidated = true;
     validateReservationForm();
@@ -20,11 +23,18 @@ document.querySelector("#form").addEventListener("submit", (event) => {
             document.getElementById("credit-card-payment").style.display = "block";
         }
     }
-});
+}) : console.log("f");
 
-document.querySelector("#payment-form").addEventListener("submit", (event) => {
+let paymentForm = document.querySelector("#payment-form");
+(!!paymentForm) ? paymentForm.addEventListener("submit", (event) => {
     event.preventDefault();
-});
+}) : console.log("f2");
+
+let contactForm = document.querySelector("#contact-form");
+(!!contactForm) ? contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    validateContactForm();
+}) : console.log("f3");
 
 validateReservationForm = () => {
     validateRequiredFields();
@@ -34,10 +44,21 @@ validateReservationForm = () => {
     validateDates();
 }
 
+validateContactForm = () => {
+    validateRequiredField("names");
+    validateRequiredField("email");
+    validateRequiredField("message");
+}
+
 validateRequiredField = (fieldName) => {
     let field = document.getElementById(fieldName).value;
+    
+    let namesError = document.querySelector("#names-error");
+    let emailError = document.querySelector("#email-error");
+    let messageError = document.querySelector("#message-error");
 
     if (field === "") {
+        allValidated = false;
         if (!!document.getElementById(`${fieldName}-message`)) {
             return;
         }
@@ -46,7 +67,13 @@ validateRequiredField = (fieldName) => {
         errorMessage.classList.add("error-message");
         errorMessage.id = `${fieldName}-message`;
         errorMessage.innerHTML = `Моля, попълнете ${translator[fieldName]}.`;
-        document.getElementById(`${fieldName}-field`).appendChild(errorMessage);
+
+        if (!!namesError && !!emailError && !!messageError) {
+            document.getElementById(`${fieldName}-error`).appendChild(errorMessage);
+        }
+        else {
+            document.getElementById(`${fieldName}-field`).appendChild(errorMessage);
+        }
 
         if (!!document.getElementById("underage-message")) {
             let field = document.getElementById("age-field");
@@ -71,9 +98,6 @@ validateRequiredField = (fieldName) => {
             let message = document.getElementById("date-diff-message");
             field.removeChild(message);
         }
-
-        allValidated = false;
-
     }
     else {
         if (!document.getElementById(`${fieldName}-message`)) {
@@ -81,6 +105,10 @@ validateRequiredField = (fieldName) => {
         }
 
         let field = document.getElementById(`${fieldName}-field`);
+        if (!!namesError && !!emailError && !!messageError) {
+            field = document.getElementById(`${fieldName}-error`);
+        }
+        
         let message = document.getElementById(`${fieldName}-message`);
         field.removeChild(message);
     }
@@ -102,10 +130,12 @@ validateAge = () => {
     let age = document.getElementById("age").value;
 
     if (age === "") {
+        allValidated = false;
         return;
     }
 
     if (age < 18) {
+        allValidated = false;
         if (!!document.getElementById("underage-message")) {
             return;
         }
@@ -115,8 +145,6 @@ validateAge = () => {
         underageMessage.id = "underage-message";
         underageMessage.innerHTML = "Трябва да сте пълнолетен, за да можете да правите резервации.";
         document.getElementById("age-field").appendChild(underageMessage);
-
-        allValidated = false;
     }
     else {
         if (!document.getElementById("underage-message")) {
@@ -133,10 +161,12 @@ validateEmail = () => {
 let email = document.getElementById("email").value;
 
     if (email === "") {
+        allValidated = false;
         return;
     }
 
     if (!email.includes("@") || !email.includes(".")) {
+        allValidated = false;
         if (!!document.getElementById("valid-email-message")) {
             return;
         }
@@ -146,8 +176,6 @@ let email = document.getElementById("email").value;
         emailMessage.id = "valid-email-message";
         emailMessage.innerHTML = "Моля, попълнете валиден имейл.";
         document.getElementById("email-field").appendChild(emailMessage);
-
-        allValidated = false;
     }
     else {
         if (!document.getElementById("valid-email-message")) {
@@ -165,10 +193,12 @@ validatePassword = () => {
     const regex = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
         
     if (password === "") {
+        allValidated = false;
         return;
     }
     
     if (!regex.test(password)) {
+        allValidated = false;
         if (!!document.getElementById("valid-pass-message")) {
             return;
         }
@@ -178,8 +208,6 @@ validatePassword = () => {
         passwordMessage.id = "valid-pass-message";
         passwordMessage.innerHTML = "Паролата трябва да е дълга поне 8 символа, да има поне една главна/малка буква, да има поне едно число и един символ.";
         document.getElementById("password-field").appendChild(passwordMessage);
-
-        allValidated = false;
     }
     else {
         if (!document.getElementById("valid-pass-message")) {
@@ -197,10 +225,12 @@ validateDates = () => {
     let checkOutDate = document.getElementById("check-out").value;
 
     if (checkInDate === "" || checkOutDate === "") {
+        allValidated = false;
         return;
     }
 
     if (new Date(checkInDate) >= new Date(checkOutDate)) {
+        allValidated = false;
         if (!!document.getElementById("date-diff-message")) {
             return;
         }
@@ -210,8 +240,6 @@ validateDates = () => {
         passwordMessage.id = "date-diff-message";
         passwordMessage.innerHTML = "Датата на настаняване трябва да е преди датата на отпътуване.";
         document.getElementById("dates-field").appendChild(passwordMessage);
-
-        allValidated = false;
     }
     else {
         if (!document.getElementById("date-diff-message")) {
@@ -225,35 +253,41 @@ validateDates = () => {
 }
 
 //credit card payment form
-document.querySelector('.card-number-input').oninput = () =>{
+let cardNumberInput = document.querySelector('.card-number-input');
+(!!cardNumberInput) ? cardNumberInput.oninput = () => {
     document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
-}
+} : console.log("f4");
 
-document.querySelector('.card-holder-input').oninput = () =>{
+let cardHolderInput = document.querySelector('.card-holder-input');
+(!!cardHolderInput) ? cardHolderInput.oninput = () =>{
     document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
-}
+} : console.log("f5");
 
-document.querySelector('.month-input').oninput = () =>{
+let monthInput = document.querySelector('.month-input');
+(!!monthInput) ? monthInput.oninput = () =>{
     document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
-}
+} : console.log("f6");
 
-document.querySelector('.year-input').oninput = () =>{
+let yearInput = document.querySelector('.year-input');
+(!!yearInput) ? yearInput.oninput = () =>{
     document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
-}
+} : console.log("f7");
 
-document.querySelector('.cvv-input').onmouseenter = () =>{
+let cvvInput = document.querySelector('.cvv-input');
+(!!cvvInput) ? cvvInput.onmouseenter = () =>{
     document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
     document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
-}
+} : console.log("f8");
 
-document.querySelector('.cvv-input').onmouseleave = () =>{
+
+(!!cvvInput) ? cvvInput.onmouseleave = () =>{
     document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
     document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
-}
+} : console.log("f9");
 
-document.querySelector('.cvv-input').oninput = () =>{
+(!!cvvInput) ? cvvInput.oninput = () =>{
     document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
-}
+} : console.log("f10");
 
 //close button
 openForm = () => {

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/contacts.css">
   <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="scripts/script.js" async></script>
+  <script type="text/javascript" src="scripts/validation.js" async></script>
 </head>
 
 <body>
@@ -70,19 +70,22 @@
           <div class="contact-form">
             <form action="" id="contact-form">
               <h2>Изпратете ни Вашето съобщение</h2>
-              <div class="input-box">
-                <input type="text" required="true" name="">
+              <div class="input-field" id="names-field">
+                <input type="text" name="names" id="names">
                 <span>Име и фамилия</span>
               </div>
-              <div class="input-box">
-                <input type="email" required="true" name="">
+              <div class="error" id="names-error"></div>
+              <div class="input-field" id="email-field">
+                <input type="email" name="email" id="email">
                 <span>Електронна поща</span>
               </div>
-              <div class="input-box">
-                <textarea required="true" name=""></textarea>
+              <div class="error" id="email-error"></div>
+              <div class="input-field" id="message-field">
+                <textarea name="message" id="message"></textarea>
                 <span>Място за Вашето съобщение</span>
               </div>
-              <div class="input-box">
+              <div class="error" id="message-error"></div>
+              <div class="input-field">
                 <input type="submit" value="Изпращане" name="">
               </div>
             </form>

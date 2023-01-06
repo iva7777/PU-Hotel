@@ -108,14 +108,14 @@ section {
     color: var(--black);
 }
 
-.contact-form .input-box {
+.contact-form .input-field {
     position: relative;
     width: 100%;
     margin-top: 10px;
 }
 
-.contact-form .input-box input,
-.contact-form .input-box textarea {
+.contact-form .input-field input,
+.contact-form .input-field textarea {
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
@@ -126,7 +126,7 @@ section {
     resize: none;
 }
 
-.contact-form .input-box span {
+.contact-form .input-field span {
     position: absolute;
     left: 0;
     padding: 5px 0;
@@ -137,49 +137,51 @@ section {
     color: #666;
 }
 
-.contact-form .input-box input:focus ~ span,
-.contact-form .input-box textarea:focus ~ span{
-  color: #e91e63;
-  font-size: 12px;
-  transform: translateY(-20px);
+.contact-form .input-field input:focus~span,
+.contact-form .input-field textarea:focus~span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
 }
 
-.contact-form .input-box input[type="submit"]
-{
-  width: 100%;
-  background: var(--darkblue);
-  color: #FFF;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid var(--darkblue);
-  transition: 0.5s;
+.contact-form .input-field input[type="submit"] {
+    width: 100%;
+    background: var(--darkblue);
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid var(--darkblue);
+    transition: 0.5s;
 }
 
-.contact-form .input-box input[type="submit"]:hover
-{
-  background: #FFF;
-  color: var(--darkblue);
+.contact-form .input-field input[type="submit"]:hover {
+    background: #FFF;
+    color: var(--darkblue);
+}
+
+.error-message {
+    color: red !important;
 }
 
 @media (max-width: 991px) {
-  section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  .row {
-    flex-direction: column;
-  }
-  
-  .contact-info {
-    margin-bottom: 40px;
-    width: 100%;
-  }
-  
-  .contact-form {
-    width: 100%;
-  }
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
 }
