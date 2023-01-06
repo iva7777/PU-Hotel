@@ -33,7 +33,6 @@ h3 {
 
 .containers img:hover {
    border-radius: 20px;
-   transform: scale(1.5);
    cursor: pointer;
 }
 
