@@ -1,41 +1,49 @@
 .customers-container {
     width: auto;
-    height: 100vh;
+    height: 110vh;
 }
-.customer{
-    background: linear-gradient(45deg, #BDAFAE, var(--beige));
-    padding: 35px;
+
+.customer {
+    background: linear-gradient(45deg, hsla(12, 10%, 90%, 1) 0%, hsla(4, 10%, 71%, 1) 35%, hsla(0, 0%, 96%, 1) 100%);
+    border-radius: 20px;
+    border: 2px solid #BDAFAE;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    padding: 10px;
+    margin: 10px;
     text-align: center;
-    margin: 50px 0;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
     cursor: pointer;
     transition: all .3s ease-in;
-    width: 30em;
-    height: 45em;
+}
+.customer:hover {
+    background: linear-gradient(90deg, hsla(193, 97%, 36%, 1) 0%, hsla(190, 100%, 40%, 1) 50%, hsla(190, 53%, 57%, 1) 100%);
+    border: 2px solid #007596;
+    transition: all .3s ease-in-out;
+    color: var(--black);
+    cursor: pointer;
+    transform: translateY(-18px);
 }
 
 .customer h3 {
     font-family: Georgia, serif;
     font-size: 25px;
-    color: #4d4636;
+    color: var(--black);
 }
 
 .customer span {
     font-family: Georgia, serif;
-    font-size: 18px;
+    font-size: 15.5px;
 }
 
 .customer h3:hover {
-    color: var(--yellow);
+    color: var(--darkblue);
     transition: all .3s ease-out;
 }
 
 .customer p{
     font-family: Georgia, serif;
-    text-align: left;
-    opacity: 0.7;
     line-height: 1.8;
-    width: 50%;
+    font-size: 16px;
     margin: 0 auto;
 }
 
@@ -43,39 +51,33 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: 25px 100px;
+    margin: 25px 0 25px 70px;
 }
 
 .customer img:hover {
-    filter: sepia(2);
+    filter: grayscale(2);
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
-.customer:hover{
-    transform: translateY(-18px);
-    background: linear-gradient(45deg, var(--beige), #BDAFAE);
-}
-
-@media(min-width: 992px){
-    .customers-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
+@media (min-width: 768px) {
+    .customers-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
-}
-
-@media(min-width: 1370px){
-    .customers-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+  
+    .customer {
+        margin-top: 80px;
     }
-}
-@media(max-width: 500px){
-    .customer p{
-        width: 100%;
+  
+    .customer h3 {
+        text-align: center;
     }
-    .customer img{
-        width: 100px;
-        height: 100px;
+  
+    .customer p {
+        width: 40%;
+        margin-top: 20px;
+        padding: 10px;
+        text-align: left;
     }
-}
+  }
