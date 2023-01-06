@@ -7,6 +7,10 @@
   margin: 10px;
 }
 
+.room-info ul {
+  list-style-type: '→';
+}
+
 .room-info:hover {
   background: linear-gradient(90deg, hsla(193, 97%, 36%, 1) 0%, hsla(190, 100%, 40%, 1) 50%, hsla(190, 53%, 57%, 1) 100%);
   border: 2px solid #007596;
