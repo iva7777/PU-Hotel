@@ -180,7 +180,7 @@ legend {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    margin-top: 1%;
+    margin-top: 50px;
     padding-bottom: 60px;
     animation: dropPaymentForm 0.5s ease forwards;
 }
@@ -212,7 +212,7 @@ legend {
 
 .container form .inputBox input,
 .container form .inputBox select{
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border-radius: 10px;
     border:1px solid rgba(0,0,0,.3);
