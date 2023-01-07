@@ -140,9 +140,7 @@ section {
 
 .contact-form .input-field input:focus~span,
 .contact-form .input-field textarea:focus~span {
-    color: #e91e63;
-    font-size: 12px;
-    transform: translateY(-20px);
+    opacity: 0;
 }
 
 .contact-form .input-field input[type="submit"] {
