@@ -76,6 +76,12 @@ div .info {
     text-align: center;
 }
 
+.info a {
+    text-decoration: none;
+    color: var(--yellow);
+    font-weight: bold;
+}
+
 .messageInfo {
     position: absolute;
     top: 0;
