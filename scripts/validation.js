@@ -238,7 +238,7 @@ validateDates = () => {
         let passwordMessage = document.createElement("span");
         passwordMessage.classList.add("error-message");
         passwordMessage.id = "date-diff-message";
-        passwordMessage.innerHTML = "Датата на настаняване трябва да е преди датата на отпътуване.";
+        passwordMessage.innerHTML = "Датата и часа на настаняване трябва да са преди датата на отпътуване.";
         document.getElementById("dates-field").appendChild(passwordMessage);
     }
     else {

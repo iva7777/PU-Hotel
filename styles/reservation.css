@@ -51,7 +51,7 @@ form {
 .form input[type="text"],
 .form input[type="email"],
 .form input[type="number"],
-.form input[type="date"],
+.form input[type="datetime-local"],
 .form input[type="password"] {
     background-color: #ede8de;
 }
@@ -59,7 +59,7 @@ form {
 .form input[type="text"],
 .form input[type="email"],
 .form input[type="number"],
-.form input[type="date"],
+.form input[type="datetime-local"],
 .form input[type="password"] {
     padding: 12px;
     font-size: 14px;
@@ -74,7 +74,7 @@ form {
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
 .form input[type="number"]:focus,
-.form input[type="date"]:focus,
+.form input[type="datetime-local"]:focus,
 .form input[type="password"]:focus {
     outline: none;
     border-color: var(--silver);
@@ -83,7 +83,7 @@ form {
 .form input[type="text"]:focus + label,
 .form input[type="email"]:focus + label,
 .form input[type="number"]:focus + label,
-.form input[type="date"]:focus + label,
+.form input[type="datetime-local"]:focus + label,
 .form input[type="password"]:focus + label {
     cursor: text;
     color: #2E375A;
@@ -92,7 +92,7 @@ form {
 .form input[type="text"]:hover,
 .form input[type="email"]:hover,
 .form input[type="number"]:hover,
-.form input[type="date"]:hover,
+.form input[type="datetime-local"]:hover,
 .form input[type="password"]:hover {
     outline: none;
     border-color: var(--yellow);
