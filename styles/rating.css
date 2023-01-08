@@ -58,7 +58,7 @@
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .customers-container {
         display: flex;
         flex-direction: row;
