@@ -22,19 +22,28 @@ let form = document.querySelector("#form");
         if (document.getElementById("card").checked) {
             document.getElementById("credit-card-payment").style.display = "block";
         }
+        else if (document.getElementById("cash").checked) {
+            sendReservationEmail();
+        }
     }
-}) : console.log("f");
+}) 
+: console.log("f");
 
 let paymentForm = document.querySelector("#payment-form");
 (!!paymentForm) ? paymentForm.addEventListener("submit", (event) => {
     event.preventDefault();
-}) : console.log("f2");
+}) 
+: console.log("f2");
 
 let contactForm = document.querySelector("#contact-form");
 (!!contactForm) ? contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    allValidated = true;
     validateContactForm();
-}) : console.log("f3");
+
+    allValidated ? sendContactEmail() : console.log("not validated :D");
+}) 
+: console.log("f3");
 
 validateReservationForm = () => {
     validateRequiredFields();
