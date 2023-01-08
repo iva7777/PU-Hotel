@@ -12,7 +12,10 @@ sendContactEmail = () => {
         Subject : "Ново съобщение",
         Body : `<html><h2></h2><strong>Съобщение от ${names} - ${email}</strong><br></br>${message}</html>`
     }).then(
-    message => console.log(message)
+    message => { 
+        console.log(message);
+        window.location.href = 'contacts.html';
+    }
     );
     
 }
