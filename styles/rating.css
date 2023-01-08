@@ -1,6 +1,5 @@
 .customers-container {
     width: auto;
-    height: 110vh;
 }
 
 .customer {
@@ -65,19 +64,23 @@
         flex-direction: row;
         justify-content: space-around;
     }
-  
+
     .customer {
         margin-top: 80px;
     }
-  
+
     .customer h3 {
         text-align: center;
     }
-  
+
     .customer p {
         width: 40%;
         margin-top: 20px;
         padding: 10px;
         text-align: left;
     }
-  }
+
+    .customer span {
+        float: right;
+    }
+}
