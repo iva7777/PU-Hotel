@@ -140,10 +140,6 @@ form {
     margin-bottom: 25px;
 }
 
-hr {
-    border: 1px solid var(--black);
-}
-
 /*payment method*/
 fieldset {
     border-radius: 5px;
