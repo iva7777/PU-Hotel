@@ -24,8 +24,7 @@ h3 {
 }
 
 .containers img {
-    --s: 15px;
-    /*size of the frame*/
+    --s: 15px; /*size of the frame*/
     padding: calc(2 * var(--s));
     border: 10px double #646466;
     filter: drop-shadow(29px 14px 24px #000);
@@ -33,6 +32,7 @@ h3 {
 }
 
 .containers img:hover {
+    background-color: var(--beige);
     cursor: pointer;
 }
 
@@ -49,6 +49,7 @@ h3 {
     font-size: 18px;
     transition: .4s ease;
     border-radius: 0 5px 5px 0;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -105,8 +106,18 @@ div .info {
 }
 
 .fade {
-    animation: fade 1.4s;
     -webkit-animation: fade 1.4s;
+    animation: fade 1.4s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 2;
+    }
 }
 
 @keyframes fade {
@@ -119,12 +130,3 @@ div .info {
     }
 }
 
-@-webkit-keyframes fade {
-    from {
-        opacity: .5;
-    }
-
-    to {
-        opacity: 2;
-    }
-}
