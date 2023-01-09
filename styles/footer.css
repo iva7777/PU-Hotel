@@ -1,13 +1,14 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 footer {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 0 0 50px;
     color: var(--grey);
     background-color: var(--darkblue);
     width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
+    overflow-x: hidden;
 }
 
 .footer > * {
@@ -21,7 +22,7 @@ footer {
 
 h2 {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .footer ul {
@@ -40,7 +41,6 @@ h2 {
 
 .footer-right {
     display: flex;
-    flex-flow: row wrap;
 }
 
 .footer-right > *{
@@ -51,7 +51,6 @@ h2 {
 .footer-bottom {
     text-align: center;
     color: var(--yellow);
-    padding-bottom: 50px;
 }
 
 .creators a {
@@ -78,4 +77,10 @@ h2 {
     color: #2aa6ff;
     padding: 10px 12px;
     font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-right {
+        flex-direction: column;
+    }
 }
