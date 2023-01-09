@@ -3,10 +3,11 @@
 }
 footer {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     padding: 50px;
     color: var(--grey);
     background-color: var(--darkblue);
+    width: 100%;
 }
 
 .footer > * {
@@ -51,6 +52,15 @@ h2 {
     text-align: center;
     color: var(--yellow);
     padding-bottom: 50px;
+}
+
+.creators a {
+    text-decoration: none;
+    color: var(--yellow);
+}
+
+.creators a:hover {
+    color: #fbfba6;
 }
 
 .footer-left p {
