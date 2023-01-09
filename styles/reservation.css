@@ -168,6 +168,7 @@ legend {
 	bottom: 0;
 	left: 0;
 	right: 0;
+    z-index: 5;
 }
 
 .container{
@@ -177,15 +178,17 @@ legend {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    margin-top: 50px;
     padding-bottom: 60px;
     animation: dropPaymentForm 0.5s ease forwards;
 }
 
 #close-button {
-	background-color: white;
-	border: white;
+	background-color: transparent;
+    border-color: transparent;
 	margin-left: 93%;
+    color: white;
+    font-size: 16pt;
+    cursor: pointer;
 }
 
 .container form{
@@ -244,10 +247,14 @@ legend {
 }
 
 .container .card-container{
-    margin-bottom: -150px;
+    margin-bottom: -200px;
     position: relative;
     height: 250px;
     width: 400px;
+}
+
+.container .card-container:hover {
+    z-index: 6;
 }
 
 .container .card-container .front{
