@@ -66,17 +66,18 @@ h2 {
     padding-right: 20%;
 }
 
-.socials a {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    margin-right: 10px;
+.socials img{
+   width: 30px;
+   height: 30px;
+   margin-top: 10px;
 }
 
-.socials a i {
-    color: #2aa6ff;
-    padding: 10px 12px;
-    font-size: 20px;
+.socials a {
+    margin-left: 10px;
+}
+
+.socials a:hover {
+    filter: hue-rotate(207deg);
 }
 
 @media only screen and (max-width: 768px) {

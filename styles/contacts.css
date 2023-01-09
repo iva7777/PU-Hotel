@@ -71,6 +71,7 @@ section {
     background-color: #FFF;
     text-align: center;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .contact-info-icon i {
