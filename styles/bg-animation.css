@@ -99,7 +99,7 @@
     
     i:nth-child(12) {
         top: 570px;
-        left: 1100px;
+        left: 110px;
         background: -webkit-radial-gradient(center, ellipse cover, rgba(237, 247, 255, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
         box-shadow: 0px 0px 5px 0px #EDF7FF;
         animation-duration: 6s;
@@ -171,7 +171,7 @@
     
     i:nth-child(21) {
         top: 120px;
-        left: 930px;
+        left: 730px;
         background: -webkit-radial-gradient(center, ellipse cover, rgba(184, 175, 3, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
         box-shadow: 0px 0px 5px 0px #B8AF03;
         animation-duration: 8s;
@@ -219,7 +219,7 @@
     
     i:nth-child(27) {
         top: 456px;
-        left: 1000px;
+        left: 100px;
         background: -webkit-radial-gradient(center, ellipse cover, rgba(51, 102, 153, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
         box-shadow: 0px 0px 5px 0px #336699;
         animation-duration: 6s;
@@ -269,7 +269,7 @@
     
     i:nth-child(33) {
         top: 270px;
-        left: 1230px;
+        left: 123px;
         background: -webkit-radial-gradient(center, ellipse cover, rgba(178, 0, 255, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
         box-shadow: 0px 0px 5px 0px #B200FF;
         animation-duration: 3s;
@@ -278,7 +278,7 @@
     i:nth-child(34) {
         width: 200px;
         height: 200px;
-        top: 1126px;
+        top: 112px;
         left: 332px;
         background: -webkit-radial-gradient(center, ellipse cover, rgba(102, 204, 255, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
         box-shadow: 0px 0px 5px 0px #66CCFF;
@@ -334,7 +334,7 @@
         width: 200px;
         height: 200px;
         top: 251px;
-        left: 1053px;
+        left: 105px;
         background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 72, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
         box-shadow: 0px 0px 5px 0px #FF4800;
         animation-duration: 10s;
