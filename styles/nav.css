@@ -73,6 +73,10 @@ a.logo:hover {
     max-height: 500px;
 }
 
+[active] {
+    background-color: var(--black);
+}
+
 
 @media only screen and (min-width: 768px) {
     .header {
