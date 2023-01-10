@@ -51,16 +51,16 @@ a.logo:hover {
 }
 
 .header .menu-icon {
-    float: right;
-    padding: 28px 20px;
     position: relative;
+    float: right;
+    padding: 28px 20px;  
 }
 
 .header .menu-icon .navicon {
+    position: relative;
     background: white;
     display: block;
     height: 2px;
-    position: relative;
     width: 18px;
     margin: 20% 0;
 }

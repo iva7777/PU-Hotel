@@ -20,6 +20,12 @@ footer {
     margin-bottom: 2em;
 }
 
+iframe {
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+
 h2 {
     font-weight: 600;
     font-size: 24px;
