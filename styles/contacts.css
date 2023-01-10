@@ -165,7 +165,7 @@ section {
     color: red !important;
 }
 
-@media (max-width: 991px) {
+@media only screen and (max-width: 991px) {
     section {
         padding-top: 50px;
         padding-bottom: 50px;

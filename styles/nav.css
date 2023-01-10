@@ -74,7 +74,7 @@ a.logo:hover {
 }
 
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .header {
         position: fixed;
         top: 0;
