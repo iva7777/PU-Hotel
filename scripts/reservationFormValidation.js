@@ -14,7 +14,7 @@ let translator = {
 let allValidated = true;
 
 let form = document.querySelector("#form");
-(!!form) ? form.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     allValidated = true;
     validateReservationForm();
@@ -26,24 +26,7 @@ let form = document.querySelector("#form");
             sendReservationEmail();
         }
     }
-}) 
-: console.log("f");
-
-let paymentForm = document.querySelector("#payment-form");
-(!!paymentForm) ? paymentForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-}) 
-: console.log("f2");
-
-let contactForm = document.querySelector("#contact-form");
-(!!contactForm) ? contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    allValidated = true;
-    validateContactForm();
-
-    allValidated ? sendContactEmail() : console.log("not validated :D");
-}) 
-: console.log("f3");
+});
 
 validateReservationForm = () => {
     validateRequiredFields();
@@ -51,12 +34,6 @@ validateReservationForm = () => {
     validateEmail();
     validatePassword();
     validateDates();
-}
-
-validateContactForm = () => {
-    validateRequiredField("names");
-    validateRequiredField("email");
-    validateRequiredField("message");
 }
 
 validateRequiredField = (fieldName) => {

@@ -351,6 +351,10 @@ legend {
     color: red;
 }
 
+#card-message {
+    display: none;
+}
+
 @keyframes dropPaymentForm {
 	0% {opacity: 0;}
 	60% {transform: translateY(50px);}

@@ -9,10 +9,6 @@
     <link rel = "icon" href = "images/logo-golden.png" type = "image/png">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/reservation.css">
-    <script src="scripts/validation.js" async></script>
-    <script src="scripts/cardFormValidation.js" async></script>
-    <script src="scripts/email.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <header class="header">
@@ -170,7 +166,8 @@
                             <input type="text" maxlength="4" class="cvv-input">
                         </div>
                     </div>
-                    <input type="submit" value="submit" class="submit-btn">
+                    <input type="submit" value="плати" class="submit-btn" id="submit-btn">
+                    <span class="error-message" id="card-message">Картата не е валидна</span>
                 </form>
             </div>    
         </section>
@@ -208,5 +205,11 @@
             <p class="creators"><a href="https://github.com/iva7777">Iva Kestenova</a> and <a href="https://github.com/Ibryam512">Ibryam Ibryamov</a> </p>
         </div>
     </footer>
+    
+    <script src="scripts/reservationFormValidation.js"></script>
+    <script src="scripts/cardFormValidation.js"></script>
+    <script src="scripts/email.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </body>
 </html>
