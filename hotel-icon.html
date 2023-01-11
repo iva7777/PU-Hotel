@@ -34,36 +34,44 @@
 
         #building_bottom {
             animation: buildingBottom 1s ease-out forwards;
+            -webkit-animation: buildingBottom 1s ease-out forwards;
         }
 
         #window_01, #window_02, #door {
             animation: buildingBottom 1s 0.1s ease-in forwards;
+            -webkit-animation: buildingBottom 1s 0.1s ease-in forwards;
         }
 
         #building_top {
             animation: buildingTop 1s 1.2s ease-out forwards;
+            -webkit-animation: buildingTop 1s 1.2s ease-out forwards;
         }
 
         #balcony_01, #balcony_02, #balcony_03 {
             animation: buildingTop 1s 1.4s ease-out forwards;
+            -webkit-animation: buildingTop 1s 1.4s ease-out forwards;
         }
 
         #balcony_04, #balcony_05, #balcony_06 {
             animation: buildingTop 1s 1.6s ease-out forwards;
+            -webkit-animation: buildingTop 1s 1.6s ease-out forwards;
         }
 
         #small_tree, #big_tree {
             animation: trees 1s 2s ease-out forwards;
+            -webkit-animation: trees 1s 2s ease-out forwards;
         }
 
         #cloud_left {
             transform: translateX(-11px);
             animation: cloudLeft 20s 2s linear infinite;
+            -webkit-animation: cloudLeft 20s 2s linear infinite;
         }
 
         #cloud_right {
             transform: translateX(72px);
             animation: cloudRight 15s 2s linear infinite;
+            -webkit-animation: cloudRight 15s 2s linear infinite;
         }
 
 
@@ -88,6 +96,31 @@
         }
 
         @keyframes cloudRight {
+            0% {transform: translateY(72px);}
+            100% {transform: translateY(-100px);}
+        }
+
+        @-webkit-keyframes buildingBottom {
+            0% {transform: translateY(20px);}
+            100% {transform: translateY(0);}
+        }
+
+        @-webkit-keyframes buildingTop {
+            0% {transform: translateY(56px);}
+            100% {transform: translateY(0);}
+        }
+
+        @-webkit-keyframes trees {
+            0% {transform: translateY(28px);}
+            100% {transform: translateY(0);}
+        }
+
+        @keyframes cloudLeft {
+            0% {transform: translateY(-11px);}
+            100% {transform: translateY(100px);}
+        }
+
+        @-webkit-keyframes cloudRight {
             0% {transform: translateY(72px);}
             100% {transform: translateY(-100px);}
         }
